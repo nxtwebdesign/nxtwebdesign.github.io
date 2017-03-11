@@ -501,18 +501,18 @@ box-shadow: 5px 6px 5px 0px rgba(59,59,59,1);
       width: 80%;
     }
     .landing-parallax-contact {
-      height: 97vh;
+      height: 110vh;
       padding-top: 5%;
     }
     .select-lg {
       font-size: 18px;
     }
     .about-parallax {
-      height: 155vh;
+      height: 165vh;
       padding-top: 5%;
     }
     .about-text {
-      height: 470px;
+      height: 400px;
     }
     .about, .statement {
       padding-top: 7%;
