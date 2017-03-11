@@ -107,7 +107,7 @@ $(document).ready(function() {
         /* Every time the window is scrolled ... */
       $(window).scroll( function(){
             // checks if window is scrolled more than 550px, adds/removes solid class
-          if($(this).scrollTop() > 550) { 
+          if($(this).scrollTop() > 400) { 
               $('.navbar-default-home').addClass('solid');
 
           } else {
