@@ -1,3 +1,21 @@
+// ----- Google Maps -------
+function initMap() {
+    var lawn = {lat: -27.447983, lng: 153.034910};
+    var map = new google.maps.Map(document.getElementById('map-canvas'), {
+      zoom: 17,
+      center: lawn,
+      gestureHandling: 'cooperative',
+      scrollwheel:  false
+    });
+    var marker = new google.maps.Marker({
+      position: lawn,
+      map: map,
+      icon: '../files/img/logo.png',
+      title: 'Kidney Lawn'
+    });
+}
+
+
 // ------ Scroll ------
 // Enables the click and scroll functionality
 $(document).ready(function (){
@@ -78,10 +96,7 @@ $(window).scroll(function () {
     var height = ($(window).height() / 0.4); //1.7 previous
     $(".caption-two").stop().animate({
         zoom: ((height - scrollTop) / (height))
-        
-    });
-    $(".caption").stop().animate({
-        zoom: ((height - scrollTop) / (height))
+
     });
 });
 // $(document).scroll(function () {
