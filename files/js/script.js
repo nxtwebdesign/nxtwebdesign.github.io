@@ -179,6 +179,16 @@ $(document).ready(function() {
                 "-webkit-filter": "blur(" + (scroll/40) + "px)",
                 filter: "blur(" + (scroll/40) + "px)"
             });
+            $(".landing-parallax-2").css({
+                //Blur suggestion from @janwagner: http://codepen.io/janwagner/ in comments
+                "-webkit-filter": "blur(" + (scroll/40) + "px)",
+                filter: "blur(" + (scroll/40) + "px)"
+            });
+            $(".landing-parallax-3").css({
+                //Blur suggestion from @janwagner: http://codepen.io/janwagner/ in comments
+                "-webkit-filter": "blur(" + (scroll/40) + "px)",
+                filter: "blur(" + (scroll/40) + "px)"
+            });
             $(".caption-two").css({
                 "font-size": (100 + scroll/5)  + "%",
                 //Blur suggestion from @janwagner: http://codepen.io/janwagner/ in comments
