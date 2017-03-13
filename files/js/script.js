@@ -90,21 +90,6 @@ $(window).scroll(function () {
         'opacity': ((height - scrollTop) / (height))
     });
 });
-$(window).scroll(function() {
-  var scroll = $(window).scrollTop();
-    $(".caption").css({
-        "font-size": (100 + scroll/5)  + "%",
-        //Blur suggestion from @janwagner: http://codepen.io/janwagner/ in comments
-        "-webkit-filter": "blur(" + (scroll/200) + "px)",
-        filter: "blur(" + (scroll/200) + "px)"
-    });
-    $(".caption-two").css({
-        "font-size": (100 + scroll/5)  + "%",
-        //Blur suggestion from @janwagner: http://codepen.io/janwagner/ in comments
-        "-webkit-filter": "blur(" + (scroll/200) + "px)",
-        filter: "blur(" + (scroll/200) + "px)"
-    });
-});
 // $(document).scroll(function () {
 //     if (window.scrollY > 50) {
 //         $(".caption-two").stop().animate({
@@ -182,10 +167,28 @@ $(document).ready(function() {
               $('.navbar-default-home').removeClass('solid');
 
           }
+          var scroll = $(window).scrollTop();
+            $(".caption").css({
+                "font-size": (100 + scroll/5)  + "%",
+                //Blur suggestion from @janwagner: http://codepen.io/janwagner/ in comments
+                "-webkit-filter": "blur(" + (scroll/200) + "px)",
+                filter: "blur(" + (scroll/200) + "px)"
+            });
+            $(".landing-parallax").css({
+                //Blur suggestion from @janwagner: http://codepen.io/janwagner/ in comments
+                "-webkit-filter": "blur(" + (scroll/40) + "px)",
+                filter: "blur(" + (scroll/40) + "px)"
+            });
+            $(".caption-two").css({
+                "font-size": (100 + scroll/5)  + "%",
+                //Blur suggestion from @janwagner: http://codepen.io/janwagner/ in comments
+                "-webkit-filter": "blur(" + (scroll/200) + "px)",
+                filter: "blur(" + (scroll/200) + "px)"
+            });
         });
     }
     //if mobile screen width detected, don't run fade in scripts
-    else{
+    else{       
       $('#topnav').addClass('solid');
       $(".navbar-collapse").css({ maxHeight: $(window).height() - $(".navbar-header").height() + "px" });
     }
