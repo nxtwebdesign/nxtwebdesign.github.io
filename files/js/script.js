@@ -62,13 +62,60 @@ $(document).ready(function (){
 //Script to fade out the caption when scrolled past
 $(window).scroll(function () {
     var scrollTop = $(window).scrollTop();
-    var height = ($(window).height() / 2.5); //1.7 previous
+    var height = ($(window).height() / 1.7); //1.7 previous
     $('.caption').css({
 
         'opacity': ((height - scrollTop) / (height))
     });
-});
+    $('.caption-two').css({
 
+        'opacity': ((height - scrollTop) / (height))
+    });
+});
+//Script to fade out the caption when scrolled past
+$(window).scroll(function () {
+    var scrollTop = $(window).scrollTop();
+    var height = ($(window).height() / 0.4); //1.7 previous
+    $(".caption-two").stop().animate({
+        zoom: ((height - scrollTop) / (height))
+        
+    });
+    $(".caption").stop().animate({
+        zoom: ((height - scrollTop) / (height))
+    });
+});
+// $(document).scroll(function () {
+//     if (window.scrollY > 50) {
+//         $(".caption-two").stop().animate({
+//             zoom: 0.9
+//         });
+//     }
+//     else if (window.scrollY > 60) {
+//         $(".caption-two").stop().animate({
+//             zoom: 0.8
+//         });
+//     }
+//     else if (window.scrollY > 70) {
+//         $(".caption-two").stop().animate({
+//             zoom: 0.7
+//         });
+//     }
+//     else if (window.scrollY > 80) {
+//         $(".caption-two").stop().animate({
+//             zoom: 0.6
+//         });
+//     }
+//     else if (window.scrollY > 90) {
+//         $(".caption-two").stop().animate({
+//             zoom: 0.5
+//         });
+//     }
+//     else {
+//         $(".caption-two").stop().animate({
+//             zoom: 1
+//         });
+//     }
+// });
 //Script to fade out the scroll gif when scrolled past
 $(window).scroll(function () {
     var scrollTop = $(window).scrollTop();
