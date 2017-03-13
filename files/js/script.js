@@ -90,13 +90,19 @@ $(window).scroll(function () {
         'opacity': ((height - scrollTop) / (height))
     });
 });
-//Script to fade out the caption when scrolled past
-$(window).scroll(function () {
-    var scrollTop = $(window).scrollTop();
-    var height = ($(window).height() / 0.4); //1.7 previous
-    $(".caption-two").stop().animate({
-        zoom: ((height - scrollTop) / (height))
-
+$(window).scroll(function() {
+  var scroll = $(window).scrollTop();
+    $(".caption").css({
+        "font-size": (100 + scroll/5)  + "%",
+        //Blur suggestion from @janwagner: http://codepen.io/janwagner/ in comments
+        "-webkit-filter": "blur(" + (scroll/200) + "px)",
+        filter: "blur(" + (scroll/200) + "px)"
+    });
+    $(".caption-two").css({
+        "font-size": (100 + scroll/5)  + "%",
+        //Blur suggestion from @janwagner: http://codepen.io/janwagner/ in comments
+        "-webkit-filter": "blur(" + (scroll/200) + "px)",
+        filter: "blur(" + (scroll/200) + "px)"
     });
 });
 // $(document).scroll(function () {
