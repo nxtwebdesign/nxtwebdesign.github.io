@@ -600,7 +600,7 @@ box-shadow: 5px 6px 5px 0px rgba(59,59,59,1);
 @media screen and (min-width: 800px) {
     .logo {
       width: 160px;
-      margin-top: 10%;
+      padding: 10%;
     }
     .pricing, .pricing-2 {
       left: 8%;
