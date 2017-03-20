@@ -70,7 +70,7 @@ $(document).ready(function (){
         });
     });
     $("#go-reasons").click(function (){
-        $("#reasons").velocity("scroll", { 
+         $("#reasons").velocity("scroll", { 
             duration: 1000,
         });
     });
@@ -170,7 +170,6 @@ $(document).ready(function() {
 
           } else {
               $('.navbar-default-home').removeClass('solid');
-
           }
           var scroll = $(window).scrollTop();
             $(".caption").css({
