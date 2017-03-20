@@ -1,4 +1,3 @@
-
 .landing-block-one {
 	height: 100%;
   width: 100%;
@@ -24,15 +23,12 @@
   text-align: center;
   display: inline-block;
 	color: #3b3b3b; 
-  padding-top: 1%;
+  padding-top: 4%;
   padding-bottom: 2%;
 	font-family: 'Lato', sans-serif;
   font-size: 16px;
 }
-.landing-block-three:before {
-  display: inline-block;
-  vertical-align: middle;
-}
+
 .landing-block-three {
 	height: 100%;
   width: 100%;
@@ -45,6 +41,7 @@
   z-index: 11;
   font-family: 'Lato', sans-serif;
   text-align: center;
+  overflow: hidden; 
 }
 .landing-block-four {
   width: 100%;
@@ -147,34 +144,35 @@ box-shadow: 5px 6px 5px 0px rgba(59,59,59,1);
   -webkit-overflow-scrolling: touch;
   background-attachment: fixed;
   box-shadow: inset 0 0 1em #111;
+  -webkit-backface-visibility: hidden;
 }
 
 .landing-parallax {
   background-image: url(../img/landing-parallax.jpg);
   height: 100vh;
-  transform: translateZ(-1px) scale(1.05);
+  transform: translateZ(-1px) scale(1.05);-webkit-backface-visibility: hidden;
 }
 
 .landing-parallax-2 {
   background-image: url(../img/landing-parallax2.jpg);
   height: 100vh;
-  transform: translateZ(-1px) scale(1.05);
+  transform: translateZ(-1px) scale(1.05);-webkit-backface-visibility: hidden;
 }
 
 .landing-parallax-3 {
   background-image: url(../img/landing-parallax3.jpg);
   height: 100vh;
-  transform: translateZ(-1px) scale(1.05);
+  transform: translateZ(-1px) scale(1.05);-webkit-backface-visibility: hidden;
 }
 
 .landing-parallax-contact {
   background-image: url(../img/landing-parallax4.jpg);
-  transform: translateZ(-1px) scale(1.02);
+  transform: translateZ(-1px) scale(1.02);-webkit-backface-visibility: hidden;
   z-index: 3;
 }
 .about-parallax {
   background-image: url(../img/about-parallax.jpg);
-  transform: translateZ(-1px) scale(1.1);
+  transform: translateZ(-1px) scale(1.1);-webkit-backface-visibility: hidden;
 }
 
 /*.caption-block {
@@ -192,7 +190,7 @@ box-shadow: 5px 6px 5px 0px rgba(59,59,59,1);
   width: 100%;
 }
 .caption, .caption-two {
-    position: fixed !important;
+  position: fixed !important;
     vertical-align: middle;
     height: 100%;
     width: 100%;
@@ -201,61 +199,26 @@ box-shadow: 5px 6px 5px 0px rgba(59,59,59,1);
     padding: 10%;
     letter-spacing: 5px;
     font-family: 'Lato', sans-serif;
+    
 }
 
 .caption,.caption-two {
-    bottom: 9%;
+    bottom: 15%;
 }
 
 .icon-scroll,
 .icon-scroll:before {
   position: absolute;
-  left: 50%;
-}
-.icon-scroll {
-  width: 40px;
-  height: 70px;
-  margin-left: -20px;
-  top: 92%;
-  margin-top: -35px;
-  box-shadow: inset 0 0 0 1px #fff;
-  border-radius: 25px;
-}
-.icon-scroll:before {
-  content: '';
-  width: 5px;
-  height: 5px;
-  background: #fff;
-  top: 10px;
-  border-radius: 4px;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-name: scroll;
-          animation-name: scroll;
-}
-@-webkit-keyframes scroll {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-  }
-}
-@keyframes scroll {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-  }
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
+
+.icon-scroll:hover {
+  margin-top: 10px;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
 
 /*--------------------Web Design-------------------*/
 .pricing, .pricing-2 {
@@ -368,12 +331,7 @@ box-shadow: 5px 6px 5px 0px rgba(59,59,59,1);
   padding-top: 0px;
 }
 
-.about, .statement {
-  font-size: 18px;
-}
-.statement {
-  margin-bottom: 20px;
-}
+
 
 /*------------FAQ-----------*/
 .faq {
@@ -538,6 +496,10 @@ box-shadow: 5px 6px 5px 0px rgba(59,59,59,1);
     .navbar-default-home .navbar-nav > .active > a:focus {
       background-color: transparent;
     }
+    .scroll {
+      left: 47%;
+      padding-top: 50%;
+    }
 }
 /*
 @media screen and ( min-width: 360px ) { /*for Samsung and Android devices with screen res=1080x1920 and above
@@ -584,7 +546,7 @@ box-shadow: 5px 6px 5px 0px rgba(59,59,59,1);
       border: 1px solid #DCDDDE;
     }
     .landing-parallax-contact {
-      height: 90vh;
+      height: 97vh;
       padding-top: 0%;
     }
     .about-parallax {
@@ -609,16 +571,12 @@ box-shadow: 5px 6px 5px 0px rgba(59,59,59,1);
     .icon-scroll:before {
       position: absolute;
       left: 50%;
-      margin-left: -2px;
     }
     .icon-scroll {
       width: 30px;
       height: 50px;
-      margin-left: -10px;
-      top: 103%;
-      margin-top: -35px;
-      box-shadow: inset 0 0 0 1px #fff;
-      border-radius: 25px;
+      margin-left: -27px;
+      top: 106%;
       display: inline-block;
     }
     .contact-details {
@@ -645,12 +603,26 @@ box-shadow: 5px 6px 5px 0px rgba(59,59,59,1);
       line-height: 60px;
     }
     .select-lg {
-      font-size: 25px;
+      font-size: 22px;
     }
     .about-text {
       margin-left: 6%;
       height: 300px;
     }
+    .landing-parallax-contact {
+      height: 97vh;
+      padding-top: 0%;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+  
+  .about, .statement {
+    font-size: 18px;
+  }
+    .statement {
+      margin-bottom: 20px;
+  }
 }
 
 body:before {
@@ -661,7 +633,7 @@ body:before {
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: auto;
+  z-index: auto;-webkit-backface-visibility: hidden;
   background: #ffffff;
 /*-webkit-background-size: cover;
   -moz-background-size: cover;
@@ -735,8 +707,11 @@ Left hand side address, ph, email, trading hours etc and guarantee
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default-home .navbar-nav > li > a:hover,
 .navbar-default-home .navbar-nav > li > a:focus {
-  color: #00D0FF;
+  color: #F2682D;
   background-color: transparent;
+  margin-top: 2px;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
@@ -747,6 +722,7 @@ Left hand side address, ph, email, trading hours etc and guarantee
 	-webkit-transition: all 0.3s;
    -moz-transition: all 0.3s;
   transition: all 0.3s;
+  margin-top: 0px;
   color: #ffffff;
 }
 
@@ -943,8 +919,10 @@ input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
   -moz-box-shadow: 1px -4px 18px 8px rgba(0,0,0,0.75);
   box-shadow: 1px -4px 18px 8px rgba(0,0,0,0.75);
 }
+
 .contact-form {
-  height: 600px;
+  height: 100%;
+  padding-bottom: 60%;
 }
 .form-name {
   margin-bottom: -1px;

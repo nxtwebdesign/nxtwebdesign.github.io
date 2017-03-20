@@ -64,8 +64,13 @@ $(document).ready(function (){
             duration: 1000,
         });
     });
-     $("#go-plans").click(function (){
+    $("#go-plans").click(function (){
         $("#plans").velocity("scroll", { 
+            duration: 1000,
+        });
+    });
+    $("#go-reasons").click(function (){
+        $("#reasons").velocity("scroll", { 
             duration: 1000,
         });
     });
