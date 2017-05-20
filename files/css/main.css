@@ -151,7 +151,6 @@ box-shadow: 5px 6px 5px 0px rgba(59,59,59,1);
 .landing-parallax {
   background-image: url(../img/landing-parallax.jpg);
   height: 100vh;
-  transform: translateZ(-1px) scale(1.05);-webkit-backface-visibility: hidden;
 }
 
 .landing-parallax-2 {
@@ -187,7 +186,7 @@ box-shadow: 5px 6px 5px 0px rgba(59,59,59,1);
   background-color:rgba(0,0,0,0.5);
   height: 100%;
   font-family: 'Lato', sans-serif; 
-  z-index: 1;
+  z-index: 2;
   width: 100%;
 }
 .caption, .caption-two {
@@ -661,8 +660,8 @@ body {
 }
 
 .img-responsive {
-	display:block;
-    margin:auto;
+	display: block;
+    margin: auto;
 }
 
 /* Navbar */

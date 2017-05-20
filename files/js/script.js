@@ -15,7 +15,6 @@ function initMap() {
     });
 }
 
-
 // ------ Scroll ------
 // Enables the click and scroll functionality
 $(document).ready(function (){
@@ -85,7 +84,7 @@ $(document).ready(function (){
 //Script to fade out the caption when scrolled past
 $(window).scroll(function () {
     var scrollTop = $(window).scrollTop();
-    var height = ($(window).height() / 1.7); //1.7 previous
+    var height = ($(window).height() / 2); //1.7 previous
     $('.caption').css({
 
         'opacity': ((height - scrollTop) / (height))
@@ -144,7 +143,6 @@ $(document).on('click','.navbar-collapse.in',function(e) {
 	    $(this).collapse('hide');
 	}
 });
-
 // $(document).ready(function() {
 //         // Transition effect for navbar 
 //         $(window).scroll(function() {
@@ -171,34 +169,34 @@ $(document).ready(function() {
           } else {
               $('.navbar-default-home').removeClass('solid');
           }
-          var scroll = $(window).scrollTop();
-            $(".caption").css({
-                "font-size": (100 + scroll/5)  + "%",
-                //Blur suggestion from @janwagner: http://codepen.io/janwagner/ in comments
-                "-webkit-filter": "blur(" + (scroll/200) + "px)",
-                filter: "blur(" + (scroll/200) + "px)"
-            });
-            $(".landing-parallax").css({
-                //Blur suggestion from @janwagner: http://codepen.io/janwagner/ in comments
-                "-webkit-filter": "blur(" + (scroll/40) + "px)",
-                filter: "blur(" + (scroll/40) + "px)"
-            });
-            $(".landing-parallax-2").css({
-                //Blur suggestion from @janwagner: http://codepen.io/janwagner/ in comments
-                "-webkit-filter": "blur(" + (scroll/40) + "px)",
-                filter: "blur(" + (scroll/40) + "px)"
-            });
-            $(".landing-parallax-3").css({
-                //Blur suggestion from @janwagner: http://codepen.io/janwagner/ in comments
-                "-webkit-filter": "blur(" + (scroll/40) + "px)",
-                filter: "blur(" + (scroll/40) + "px)"
-            });
-            $(".caption-two").css({
-                "font-size": (100 + scroll/5)  + "%",
-                //Blur suggestion from @janwagner: http://codepen.io/janwagner/ in comments
-                "-webkit-filter": "blur(" + (scroll/200) + "px)",
-                filter: "blur(" + (scroll/200) + "px)"
-            });
+          // var scroll = $(window).scrollTop();
+          //   $(".caption").css({
+          //       "font-size": (100 + scroll/5)  + "%",
+          //       //Blur suggestion from @janwagner: http://codepen.io/janwagner/ in comments
+          //       "-webkit-filter": "blur(" + (scroll/200) + "px)",
+          //       filter: "blur(" + (scroll/200) + "px)"
+          //   });
+          //   $(".landing-parallax").css({
+          //       //Blur suggestion from @janwagner: http://codepen.io/janwagner/ in comments
+          //       "-webkit-filter": "blur(" + (scroll/40) + "px)",
+          //       filter: "blur(" + (scroll/40) + "px)"
+          //   });
+          //   $(".landing-parallax-2").css({
+          //       //Blur suggestion from @janwagner: http://codepen.io/janwagner/ in comments
+          //       "-webkit-filter": "blur(" + (scroll/40) + "px)",
+          //       filter: "blur(" + (scroll/40) + "px)"
+          //   });
+          //   $(".landing-parallax-3").css({
+          //       //Blur suggestion from @janwagner: http://codepen.io/janwagner/ in comments
+          //       "-webkit-filter": "blur(" + (scroll/40) + "px)",
+          //       filter: "blur(" + (scroll/40) + "px)"
+          //   });
+          //   $(".caption-two").css({
+          //       "font-size": (100 + scroll/5)  + "%",
+          //       //Blur suggestion from @janwagner: http://codepen.io/janwagner/ in comments
+          //       "-webkit-filter": "blur(" + (scroll/200) + "px)",
+          //       filter: "blur(" + (scroll/200) + "px)"
+          //   });
         });
     }
     //if mobile screen width detected, don't run fade in scripts
